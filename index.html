@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" , initial-scale=1.0>
+    <title>IRK cinema</title>
+</head>
+
+<body class="bodyClass">
+    <div class="topTextDiv"><div><h3 class=label>IRK cinema</h3>
+</div>
+
+  <div class="exportFilmsDiv">
+    <a class="saveFilmsBtn" href=#>Выгрузить список</a>
+    <a class="importFilmsBtn" id="importFilmsBtn" href=#>Загрузить список</a>
+  
+  </div>
+
+    </div>
+    <div class="mainDiv">
+        <div id=app>
+            <div id="inputdiv">
+                <h4 class="addFilmText"> Добавить фильм:</h4>
+                <div class="inLine">
+
+
+                    <table class="addTable">
+                        <tr class="whiteTr">
+                            <td class="td1"> <input style="width: 97%; border: 0;" type="text" id="inputnm"
+                                    list="variki" placeholder="Название" /></td>
+                            <td class="td2"><select style="width: 100%; border: 0;" id="inputgnr">
+                                    <option value="">Жанр</option>
+                                    <option value="Детектив">Детектив</option>
+                                    <option value="Ужасы">Ужасы</option>
+                                    <option value="Комедия">Комедия</option>
+                                    <option value="Семейный">Семейный</option>
+                                    <option value="Драма">Драма</option>
+                                    <option value="Триллер">Триллер</option>
+                                    <option value="Мелодрама">Мелодрама</option>
+                                    <option value="Аниме">Аниме</option>
+                                    <option value="Боевик">Боевик</option>
+                                    <option value="Приключения">Приключения</option>
+                                    <option value="Военный">Военный</option>
+                                    <option value="Фэнтези">Фэнтези</option>
+                                    <option value="Фантастика">Фантастика</option>
+                                    <option value="История">История</option>
+                                    <option value="Артхаус">Артхаус</option>
+                                    <option value="Биография">Биография</option>
+
+
+                                </select></td>
+                            <td class="td3"><select style="width: 100%; border: 0;" id="inputtype">
+                                    <option value="">Тип</option>
+                                    <option value="Фильм">Фильм</option>
+                                    <option value="Сериал">Сериал</option>
+                                    <option value="Мультфильм">Мультфильм</option>
+                                </select></td>
+                            <td class="td4"> <input style="width: 97%; border: 0;" type="text" id="inputcomm"
+                                    placeholder="Комментарий" /></td>
+                            <td class="td5"><button style="color:#000000; width: 100%;" id="addBtn"
+                                    class="btnTd">✔</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="finddiv">
+
+
+
+                <table class="addTable">
+                    <tr style="background: none;">
+                        <td style="background: none; width: 120px; ">
+                            <h5 class="findFilmText">
+                                <p style="background: none;">Подобрать фильм:</p>
+                            </h5>
+                        </td>
+                        <td><input style="    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+ height: 18px; width: 153px; border: 0; " list="datalistfilms" type="text" id="findnm" placeholder="Название"
+                                oninput="fndInputFunction()" /></td>
+                        <datalist id="datalistfilms"></datalist>
+                        <td><select style="    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+ width: 100x; border: 0; height: 20px;" name="" id="findgenre" id="findselectgenre">
+                                <option value="">Жанр</option>
+                                <option value="Детектив">Детектив</option>
+                                <option value="Ужасы">Ужасы</option>
+                                <option value="Комедия">Комедия</option>
+                                <option value="Семейный">Семейный</option>
+                                <option value="Драма">Драма</option>
+                                <option value="Триллер">Триллер</option>
+                                <option value="Мелодрама">Мелодрама</option>
+                                <option value="Аниме">Аниме</option>
+                                <option value="Боевик">Боевик</option>
+                                <option value="Приключения">Приключения</option>
+                                <option value="Военный">Военный</option>
+                                <option value="Фэнтези">Фэнтези</option>
+                                <option value="Фантастика">Фантастика</option>
+                                <option value="История">История</option>
+                                <option value="Артхаус">Артхаус</option>
+                                <option value="Биография">Биография</option>
+                            </select></td>
+                        <td> <select style="    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+ height: 20px; width: 100px; border: 0;" name="" id="findtype">
+                                <option value="">Тип</option>
+                                <option value="Фильм">Фильм</option>
+                                <option value="Сериал">Сериал</option>
+                                <option value="Мультфильм">Мультфильм</option>
+                            </select></td>
+                        <td><button style=" border: none; background:none; width: 34px; height: 23px" id="findbtn"><img
+                                    style="width: 17px; background: none;" src="lupa.svg" alt="Button Image">
+                            </button></td>
+                    </tr>
+                </table>
+
+
+            </div>
+            <div id="contentdiv">
+                <div id="unSeeDiv">
+
+                </div>
+                <div id="seeDiv">
+
+                </div>
+            </div>
+        </div>
+        <!-- <div id="zametkidiv">
+            <textarea style="padding-top:8px;" name="someText" class="textArea" id="areawithText" cols="30" rows="20"
+                placeholder=" Поле для заметок"></textarea>
+        </div> -->
+    </div>
+
+  
+
+
+    <div class="btn-up btn-up_hide">
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        if (JSON.parse(localStorage.getItem('vlad')) !== null) {
+                films = JSON.parse(localStorage.getItem('vlad'))
+            }
+            else {
+                var films = {
+                    "Непросмотренные фильмы": [],
+                    "Просмотренные фильмы": [],
+                };
+            };
+            function makeTable() {
+                let zagolovokUnSeeFilms = document.createElement('h3')
+                zagolovokUnSeeFilms.className = "zagolovokUnSeeFilmsClass td1"
+                zagolovokUnSeeFilms.textContent = "Непросмотренные фильмы"
+
+
+
+
+
+
+
+
+
+
+
+
+
+                document.querySelector("#unSeeDiv").appendChild(zagolovokUnSeeFilms)
+
+
+                let row1 = document.createElement("tr");
+                row1.className = "headtr"
+                row1.innerHTML = `
+            <td class="td1">Название</td>
+            <td class="td2">Жанр</td> 
+            <td class="td3">Тип</td>
+            <td class="td4">Комментарий</td>
+            <td class="td5"></td>
+         `;
+                document.querySelector("#unSeeDiv").appendChild(row1);
+
+                for (let i = 0; i < films["Непросмотренные фильмы"].length; i++) {
+                    let row = document.createElement("tr");
+
+                    row.className = "unSeeTr"
+
+                    if (i % 2 === 0) {
+                        row.classList.add("greyTr");
+                    }
+                    else {
+                        row.classList.add("whiteTr");
+                    }
+                    row.innerHTML = `
+            <td class="td1 ">${films["Непросмотренные фильмы"][i][0]}</td>
+            <td class="td2 ${films["Непросмотренные фильмы"][i][0]}">${films["Непросмотренные фильмы"][i][1]}</td> 
+            <td class="td3 ${films["Непросмотренные фильмы"][i][0]}">${films["Непросмотренные фильмы"][i][2]}</td>
+            <td class="correctable td4 ${films["Непросмотренные фильмы"][i][0]}" id="${films["Непросмотренные фильмы"][i][0]}">${films["Непросмотренные фильмы"][i][3]}</td>
+            <td  class="btnTd td5 ${films["Непросмотренные фильмы"][i][0]}"><button>↓</button></td>
+         `;
+                    document.querySelector("#unSeeDiv").appendChild(row);
+                }
+                let zagolovokSeeFilms = document.createElement('h3')
+                zagolovokSeeFilms.className = "zagolovokSeeFilms td1"
+                zagolovokSeeFilms.textContent = "Просмотренные фильмы"
+                document.querySelector("#seeDiv").appendChild(zagolovokSeeFilms)
+
+                let row = document.createElement("tr");
+                row.className = "headtr "
+                row.innerHTML = `
+            <td class="td1">Название</td>
+            <td class="td2">Жанр</td> 
+            <td class="td3">Тип</td>
+            <td class="td4">Комментарий</td>
+            <td class="td5"></td>
+         `;
+
+                document.querySelector("#seeDiv").appendChild(row);
+                for (let i = 0; i < films["Просмотренные фильмы"].length; i++) {
+                    let row = document.createElement("tr");
+                    row.className = "seeDiv"
+
+                    if (i % 2 === 0) {
+                        row.classList.add("greyTr");
+                    }
+                    else {
+                        row.classList.add("whiteTr");
+                    }
+                    row.innerHTML = `
+            <td class="td1">${films["Просмотренные фильмы"][i][0]}</td>
+            <td class="td2">${films["Просмотренные фильмы"][i][1]}</td> 
+            <td class="td3">${films["Просмотренные фильмы"][i][2]}</td>
+            <td class="correctable td4" id="${films["Просмотренные фильмы"][i][0]}">${films["Просмотренные фильмы"][i][3]}</td>
+            <td class="btnTd td5"><button>Х</button></td>
+         `;
+                    document.querySelector("#seeDiv").appendChild(row);
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+            let btnMove = function () {
+                var result = Array.from(document.querySelectorAll('button'));
+                for (let i = 0; i < result.length; i++) {
+                    if (result[i].id == "findbtn") {
+                        result.splice(i, 1)
+                    }
+                }
+                for (let i = 0; i < result.length; i++) {
+                    if (result[i].id == "addBtn") {
+                        result.splice(i, 1)
+                    }
+                }
+                var seeFilmsBtn = result.splice(result.length - films["Просмотренные фильмы"].length, films["Просмотренные фильмы"].length)
+                window.result = result
+                window.seeFilmsBtn = seeFilmsBtn
+                for (let i = 0; i < result.length; i++) {
+                    result[i].onclick = function () {
+                        films["Просмотренные фильмы"].push(films["Непросмотренные фильмы"][i])
+                        films["Непросмотренные фильмы"].splice(i, 1)
+                        localStorage.setItem('vlad', JSON.stringify(films))
+                        location.reload()
+                    }
+                }
+                for (let i = 0; i < seeFilmsBtn.length; i++) {
+                    seeFilmsBtn[i].onclick = function () {
+                        films["Просмотренные фильмы"].splice(i, 1)
+                        localStorage.setItem('vlad', JSON.stringify(films))
+                        location.reload()
+                    }
+                }
+            };
+
+            let writeCorrectTd = function () {
+                let correctTdText = localStorage.getItem("correctTdText")
+                let correctTdID = localStorage.getItem("correctTdID")
+
+                for (i = 0; i < films["Непросмотренные фильмы"].length; i++) {
+                    if (films["Непросмотренные фильмы"][i][0] == correctTdID) {
+                        films["Непросмотренные фильмы"][i][3] = correctTdText
+                    }
+                }
+                for (i = 0; i < films["Просмотренные фильмы"].length; i++) {
+                    if (films["Просмотренные фильмы"][i][0] == correctTdID) {
+                        films["Просмотренные фильмы"][i][3] = correctTdText
+                    }
+                }
+
+
+
+
+
+
+
+                localStorage.setItem('vlad', JSON.stringify(films))
+                location.reload()
+            }
+
+            document.getElementsByClassName("correctable")
+            let commChangeFn = function () {
+                var tds = document.getElementsByClassName("correctable")
+                for (var i = 0; i < tds.length; i++) {
+                    tds[i].addEventListener('click', function func() {
+                        var input = document.createElement('input');
+                        input.value = this.innerHTML;
+                        this.innerHTML = '';
+                        this.appendChild(input);
+                        input.focus()
+                        var td = this;
+                        input.addEventListener('blur', function () {
+                            td.innerHTML = this.value;
+                            let correctTdID = td.id
+                            let correctTdText = this.value
+                            localStorage.setItem("correctTdText", correctTdText)
+                            localStorage.setItem("correctTdID", correctTdID)
+
+                            writeCorrectTd()
+
+
+
+
+
+                        });
+                        this.removeEventListener('click', func);
+
+
+                    });
+
+                    var newCorrectable = document.getElementsByClassName("correctable")
+                    localStorage.setItem('vlad3', JSON.stringify(newCorrectable))
+                    JSON.parse(localStorage.getItem('vlad3'))
+                }
+
+
+            };
+
+            let addNewFilm = function () {
+                let massiveNewFilm = [document.querySelector("#inputnm").value,
+                document.querySelector("#inputgnr").value,
+                document.querySelector("#inputtype").value,
+                document.querySelector("#inputcomm").value,
+                ];
+                films["Непросмотренные фильмы"].push(massiveNewFilm);
+                localStorage.setItem('vlad', JSON.stringify(films))
+                document.querySelector("#inputnm").value = "";
+                document.querySelector("#inputgnr").value = "";
+                document.querySelector("#inputtype").value = "";
+                document.querySelector("#inputcomm").value = "";
+                commChangeFn();
+                btnMove();
+                makeTable();
+                localStorage.setItem('vlad', JSON.stringify(films))
+                location.reload()
+            }
+
+           
+
+            let fndInputFunction = function () {
+                if (document.getElementById("findnm").value.length == 2) {
+                    console.log(document.getElementById("findnm").value)
+                    addOptionsToDatabase()
+                }
+                if (document.getElementById("findnm").value.length == 1) {
+                    document.getElementById("datalistfilms").innerHTML = ''
+                }
+                if (document.getElementById("findnm").value.length == 0) {
+                    document.getElementById("datalistfilms").innerHTML = ''
+                }
+
+            }
+
+            let addOptionsToDatabase = function () {
+                document.getElementById("datalistfilms").innerHTML = ''
+                let allFilmName = []
+                for (let i = 0; i < allFilmArray.length; i++) {
+                    allFilmName.push(allFilmArray[i][0])
+                }
+
+                for (let i = 0; i < allFilmName.length; i++) {
+                    let temp = document.createElement('option')
+                    temp.value = allFilmName[i]
+                    document.querySelector("#datalistfilms").appendChild(temp)
+                }
+
+
+            }
+
+            makeTable();
+            btnMove();
+            commChangeFn();
+
+            let allFilmArray = [].concat(films["Непросмотренные фильмы"], films["Просмотренные фильмы"])
+            let allFilmArray2 = [].concat(...allFilmArray)
+            document.querySelector('#addBtn').onclick = function () {
+                if (allFilmArray2.includes(document.querySelector("#inputnm").value) && document.querySelector("#inputnm").value) {
+                    alert("Такой фильм уже есть в базе")
+                    document.querySelector("#inputnm").value = "";
+                    document.querySelector("#inputgnr").value = "";
+                    document.querySelector("#inputtype").value = "";
+                    document.querySelector("#inputcomm").value = "";
+                }
+                else if (!document.querySelector("#inputnm").value) {
+                    alert("Введите название фильма")
+                }
+                else {
+                    addNewFilm()
+                }
+            }
+
+            document.querySelector('#findbtn').onclick = function () {
+                var tmpValue = document.querySelector("#findgenre").value;
+                var tmpValue2 = document.querySelector("#findtype").value;
+                var tmpValue1 = document.querySelector("#findnm").value;
+                var findInfoArray = [tmpValue1, tmpValue, tmpValue2]
+                let allFilmName = [];
+                let unSeeFilmsName = [];
+                let unSeeFilms = films["Непросмотренные фильмы"]
+                let seeFilms = films["Просмотренные фильмы"]
+                let seeFilmsName = [];
+                for (let i = 0; i < allFilmArray.length; i++) {
+                    allFilmName.push(allFilmArray[i][0])
+                }
+                for (let i = 0; i < unSeeFilms.length; i++) {
+                    unSeeFilmsName.push(unSeeFilms[i][0])
+                }
+                for (let i = 0; i < seeFilms.length; i++) {
+                    seeFilmsName.push(seeFilms[i][0])
+                }
+                if (unSeeFilmsName.includes(document.querySelector("#findnm").value)) {
+                    for (let i = 0; i < Array.from(films["Непросмотренные фильмы"]).length; i++) {
+                        if (Array.from(films["Непросмотренные фильмы"])[i][0] == tmpValue1) {
+                            alert(`Фильм "${tmpValue1}" не просмотрен.
+Он переместится в начало списка для редактирования.`)
+                            films["Непросмотренные фильмы"].unshift(...films["Непросмотренные фильмы"].splice(i, 1))
+                            localStorage.setItem('vlad', JSON.stringify(films))
+                            location.reload()
+                        }
+                    }
+                }
+                else if (seeFilmsName.includes(document.querySelector("#findnm").value)) {
+                    for (let i = 0; i < Array.from(films["Просмотренные фильмы"]).length; i++) {
+                        if (Array.from(films["Просмотренные фильмы"])[i][0] == tmpValue1) {
+                            alert(`Фильм "${tmpValue1}" просмотрен.
+Он переместится в начало списка для редактирования.`)
+                            films["Просмотренные фильмы"].unshift(...films["Просмотренные фильмы"].splice(i, 1))
+                            localStorage.setItem('vlad', JSON.stringify(films))
+                            location.reload()
+                        }
+                    }
+                }
+                else if (!tmpValue1 && !tmpValue2 && tmpValue) {
+                    let tempGenre = []
+                    for (let i = 0; i < films["Непросмотренные фильмы"].length; i++) {
+                        Array.from(films["Непросмотренные фильмы"][i]).includes(`${tmpValue}`) ?
+                            films["Непросмотренные фильмы"].unshift(...(films["Непросмотренные фильмы"].splice(i, 1)))
+                            : tempGenre.push(films["Непросмотренные фильмы"][i])
+                    };
+                    if (tempGenre.length == films["Непросмотренные фильмы"].length) {
+                        alert("Поиск не дал результатов")
+                    };
+                    localStorage.setItem('vlad', JSON.stringify(films))
+                    location.reload()
+                }
+                else if (!tmpValue1 && tmpValue2 && !tmpValue) {
+                    let tempType = []
+                    for (let i = 0; i < films["Непросмотренные фильмы"].length; i++) {
+                        Array.from(films["Непросмотренные фильмы"][i]).includes(`${tmpValue2}`) ?
+                            films["Непросмотренные фильмы"].unshift(...(films["Непросмотренные фильмы"].splice(i, 1)))
+                            : tempType.push(films["Непросмотренные фильмы"][i])
+                    }
+                    if (tempType.length == films["Непросмотренные фильмы"].length) {
+                        alert("Поиск не дал результатов")
+                    };
+                    localStorage.setItem('vlad', JSON.stringify(films))
+                    location.reload()
+                }
+                else if (!tmpValue1 && tmpValue2 && tmpValue) {
+                    let tempGenreWithType = []
+
+                    for (let i = 0; i < films["Непросмотренные фильмы"].length; i++) {
+                        Array.from(films["Непросмотренные фильмы"][i]).includes(`${tmpValue}`) &&
+                            Array.from(films["Непросмотренные фильмы"][i]).includes(`${tmpValue2}`) ?
+                            films["Непросмотренные фильмы"].unshift(...(films["Непросмотренные фильмы"].splice(i, 1))) :
+                            tempGenreWithType.push(i)
+                    }
+                    if (tempGenreWithType.length == films["Непросмотренные фильмы"].length) {
+                        alert("Поиск не дал результатов")
+                    }
+                    localStorage.setItem('vlad', JSON.stringify(films))
+                    location.reload()
+                }
+                else if (!tmpValue && !tmpValue2 && !tmpValue1) {
+                    alert("Введите параметры поиска")
+                }
+                else {
+                    alert("Поиск не дал результатов")
+                    location.reload()
+                }
+            }
+
+            window.onload = () => {
+
+
+
+            }
+
+            const btnUp = {
+                el: document.querySelector('.btn-up'),
+                show() {
+                    // удалим у кнопки класс btn-up_hide
+                    this.el.classList.remove('btn-up_hide');
+                },
+                hide() {
+                    // добавим к кнопке класс btn-up_hide
+                    this.el.classList.add('btn-up_hide');
+                },
+                addEventListener() {
+                    // при прокрутке содержимого страницы
+                    window.addEventListener('scroll', () => {
+                        // определяем величину прокрутки
+                        const scrollY = window.scrollY || document.documentElement.scrollTop;
+                        // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+                        scrollY > 80 ? this.show() : this.hide();
+                    });
+                    // при нажатии на кнопку .btn-up
+                    document.querySelector('.btn-up').onclick = () => {
+                        // переместим в начало страницы
+                        window.scrollTo({
+                            top: 0,
+                            left: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }
+
+            btnUp.addEventListener();
+
+            document.getElementsByClassName('saveFilmsBtn')[0].onclick = function () {
+                var csvData = 'data:application/txt;charset=utf-8,' + encodeURIComponent(JSON.stringify(films));
+                this.href = csvData;
+                this.target = '_blank';
+                this.download = 'IRK cinema films.txt';
+            };
+
+            document.getElementsByClassName('importFilmsBtn')[0].onclick = function () {
+                //let importFilmsList = prompt("Скопируйте список фильмов и вставьте в это поле:")
+
+                films = JSON.parse(prompt("Скопируйте список фильмов и вставьте в это поле:"))
+                if (films) {
+
+                    localStorage.setItem('vlad', JSON.stringify(films))
+
+                }
+
+
+
+
+                location.reload()
+            };
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    </script>
+<style>
+
+    .topTextDiv {
+  height: 55px;
+  background-image: linear-gradient(#ff5900 ,#ff5900a6,  #e0962709);
+  font-display: initial;
+  width: 100%;
+  display: block;
+  position: fixed;
+
+}
+
+
+.label {
+  padding-left: 17px;
+  padding-top: 10px;
+  margin: 0;
+  font-size: 23px;
+}
+
+
+#app {
+  display: inline-block;
+  width: 100%;
+}
+
+#findbtn:hover {
+  
+      transform: scale(1.1);
+    
+}
+
+#zametkidiv {
+
+  padding-left: .8vw;
+  position: fixed;
+  display: none;
+  width: 244px;
+  height: 310px;
+  margin-top: 49px;
+  
+}
+
+.bodyClass {
+
+
+  background-image: linear-gradient(rgb(161, 161, 161), rgb(71, 71, 71), rgb(22, 22, 22));
+  margin-top: 0;
+  margin-bottom: 100vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#inputdiv {
+  margin-bottom: 1vh;
+}
+.greyTr {
+  background-color: #f8f8f8;
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+}
+
+.whiteTr {
+  background-color: white;
+      box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+}
+
+.headtr {
+  background-color: #b3b3b3;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.td1 {
+  width: 30vw;
+  box-sizing: border-box;
+  padding-left: 4px;
+}
+
+.td2 {
+  width: 15vw;
+  box-sizing: border-box;
+}
+
+.td3 {
+  width: 15vw;
+  box-sizing: border-box;
+}
+
+.td4 {
+  width: 30vw;
+  box-sizing: border-box;
+}
+
+.correctable:hover {
+      text-decoration: underline;
+}
+
+
+.td5 {
+  width: 2.5vw;
+  box-sizing: border-box;
+}
+
+.findFilmText {
+  display: inline;
+  padding-left: 0;
+}
+
+.inLine {
+  display: inline;
+
+}
+
+.mainDiv {
+  margin-right:   1.5vw;
+  margin-left: 4vw;
+  display: inline-block;
+  margin-top: 54px;
+}
+
+.addTable {
+  margin: 0;
+  padding: 0;
+
+}
+#finddiv {
+  display: inline;
+}
+.zagolovokUnSeeFilmsClass {
+    margin-bottom: 0.8vh;
+    padding-left: 0px;
+}
+.zagolovokSeeFilms {
+    margin-bottom: 0.8vh;
+        padding-left: 0px;
+}
+.addFilmText {
+  padding-bottom: 0;
+  margin-bottom: 0.8vh;
+}
+.textArea {
+border-radius: 2px;
+border: none;
+  background-image: linear-gradient(#f3d6c260, #ff5900da,#ff5900);
+  padding-left: 4px;
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+}
+#inputnm {
+  font-size: 1.2vw;
+}
+
+#inputgnr {
+  font-size: 1.2vw;
+}
+#inputtype {
+    font-size: 1.2vw;
+}
+#inputcomm {
+      font-size: 1.2vw;
+}
+@media (min-width:805px) and (max-width:1200px) {
+  #zametkidiv {
+    display: inline;
+  }
+  #app {
+      width: calc(100% - 271px);
+  }
+  .td1 {
+    font-size: 1.3vw;
+  }
+ .td2 {
+   font-size: 1.3vw;
+ }
+ .td3 {
+   font-size: 1.3vw;
+ }
+ .td4 {
+   font-size: 1.3vw;
+ }
+}
+
+
+@media (min-width:1201px)  {
+  #inputnm {
+      font-size: 14.2px;
+    }
+  
+    #inputgnr {
+      font-size: 14.2px;    }
+  
+    #inputtype {
+      font-size: 14.2px;    }
+  
+    #inputcomm {
+      font-size: 14.2px;  
+      }
+
+  #zametkidiv {
+    display: inline;
+  }
+
+  #app {
+    width: calc(100% - 271px);
+  }
+
+  .td1 {
+    font-size: 16px;
+  }
+
+  .td2 {
+    font-size: 16px;
+  }
+
+  .td3 {
+    font-size: 16px;
+  }
+
+  .td4 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width:520px) and (max-width:805px) {
+  #inputnm {
+      font-size: 9.6px;
+    }
+#findnm {
+  font-size: 9.6px;
+}
+#findgenre {
+    font-size: 9.6px;
+}
+#findtype {
+      font-size: 9.6px;
+}
+
+
+
+
+
+
+    
+  
+    #inputgnr {
+      font-size: 9.6px;    }
+  
+    #inputtype {
+      font-size: 9.6px;    }
+  
+    #inputcomm {
+      font-size: 9.6px;    }
+  #zametkidiv {
+    display: none;
+  }
+
+  #app {
+    width: 100%;
+  }
+
+  .td1 {
+    font-size: 10.4px;
+  }
+
+  .td2 {
+    font-size: 10.4px;  }
+
+  .td3 {
+    font-size: 10.4px;  }
+
+  .td4 {
+    font-size: 10.4px;  }
+        .mainDiv {
+          margin-right: 1vw;
+          margin-left: 1vw;
+          display: inline-block;
+        }
+}
+
+@media (min-width:100px) and (max-width:520px) {
+  .findFilmText {
+          font-size: 10px;
+  }
+  #inputnm {
+      font-size: 9.6px;
+    }
+  
+    #findnm {
+      font-size: 9.6px;
+      width: 12vw !important;
+    }
+  
+    #findgenre {
+      font-size: 9.6px;
+            width: 15vw !important;
+    }
+  
+    #findtype {
+      font-size: 9.6px;
+            width: 12vw !important;
+    }
+
+#findbtn {
+  width: 33px !important;
+  height: 20px !important;
+  border: none;
+}
+  #zametkidiv {
+    display: none;
+  }
+#inputnm {
+  font-size: 9.6px;
+}
+
+#inputgnr {
+  font-size: 9.6px;
+}
+
+#inputtype {
+  font-size: 9.6px;
+}
+
+#inputcomm {
+  font-size: 9.6px;
+}
+    .mainDiv {
+      margin: 0;
+      display: inline-block;
+    }
+
+  #app {
+    width: 100%;
+  }
+.body {
+  margin: 0;
+}
+
+  .td1 {
+    font-size: 10.4px;
+  }
+
+  .td2 {
+    font-size: 10.4px;
+  }
+
+  .td3 {
+    font-size: 10.4px;
+  }
+
+  .td4 {
+    font-size: 10.4px;
+  }
+    .whiteTr {
+      font-size: 2px;
+    }
+    .mainDiv {
+      margin-top: 55px;
+    }
+    .saveFilmsBtn {
+      display: none;
+    }
+    .importFilmsBtn {
+            display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-up {
+  /* фиксированное позиционирование */
+  position: fixed;
+  /* цвет фона */
+  background-color: #4a4a4b;
+  /* расстояние от правого края окна браузера */
+  right: 20px;
+  /* расстояние от нижнего края окна браузера */
+  bottom: 0;
+  /* скругление верхнего левого угла */
+  border-top-left-radius: 8px;
+  /* скругление верхнего правого угла */
+  border-top-right-radius: 8px;
+  /* вид курсора */
+  cursor: pointer;
+  /* отображение элемента как flex */
+  display: flex;
+  /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+  align-items: center;
+  /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+  justify-content: center;
+  /* ширина элемента */
+  width: 60px;
+  /* высота элемента */
+  height: 50px;
+}
+
+.btn-up::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("topBtn2.svg")
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #656369;
+    /* цвет заднего фона при наведении */
+  }
+}
+
+.exportFilmsDiv {
+    position: fixed;
+right: 0vw;
+top: 16px;
+  width: 240px;
+  /* Ширина */
+
+  height: 40px;
+  /* Высота */
+  margin-right: 3vw;
+}
+
+
+.saveFilmsBtn {
+  float: right;
+      color: black;
+      font-size: small;
+}
+
+
+
+.importFilmsBtn {
+  float: left;
+color: black;
+  font-size: small;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
