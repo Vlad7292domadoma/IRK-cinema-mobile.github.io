@@ -355,8 +355,8 @@ background-color: white;
 
 .btn-up::before {
     content: "";
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     background: transparent no-repeat center center;
     background-size: 100% 100%;
     background-image: url("topBtn2.svg")
