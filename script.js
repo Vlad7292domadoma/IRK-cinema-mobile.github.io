@@ -54,7 +54,7 @@ function makeTable() {
             <td class="td2 ${films["Непросмотренные фильмы"][i][0]}">${films["Непросмотренные фильмы"][i][1]}</td> 
             <td class="td3 ${films["Непросмотренные фильмы"][i][0]}">${films["Непросмотренные фильмы"][i][2]}</td>
             <td class="correctable td4 ${films["Непросмотренные фильмы"][i][0]}" id="${films["Непросмотренные фильмы"][i][0]}">${films["Непросмотренные фильмы"][i][3]}</td>
-            <td  class="btnTd td5 ${films["Непросмотренные фильмы"][i][0]}"><button>↓</button></td>
+            <td  class="btnTd td5 ${films["Непросмотренные фильмы"][i][0]}"><button class="tableBtn">↓</button></td>
          `;
         document.querySelector("#divUnSeeFilmsTable").appendChild(row);
     }
@@ -89,7 +89,7 @@ function makeTable() {
             <td class="td2">${films["Просмотренные фильмы"][i][1]}</td> 
             <td class="td3">${films["Просмотренные фильмы"][i][2]}</td>
             <td class="correctable td4" id="${films["Просмотренные фильмы"][i][0]}">${films["Просмотренные фильмы"][i][3]}</td>
-            <td class="btnTd td5"><button>Х</button></td>
+            <td class="btnTd td5"><button class="tableBtn">Х</button></td>
          `;
         document.querySelector("#seeDiv").appendChild(row);
     }
