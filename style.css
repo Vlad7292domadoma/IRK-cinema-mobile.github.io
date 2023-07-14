@@ -21,6 +21,7 @@ margin-right: 25px;
     left: 0%;
 display: table;
 z-index: 1000;
+
 }
 
 .labelDiv {
@@ -290,9 +291,20 @@ background-color: white;
 .td5 {
     width: 5vw;
     box-sizing: border-box;
+    padding: 0%;
+        margin: 0%;
+        padding-top: 2px;
 }
 
+.tableBtn {
+    position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+  width: 4.5vw;
+   height: 4.2vw;
+  
 
+}
 
 
 
@@ -352,23 +364,25 @@ background-color: white;
     /* выравниваем элементы внутри элемента по центру вдоль главной оси */
     justify-content: center;
     /* ширина элемента */
-    width: 120px;
+    width: 60px;
     /* высота элемента */
-    height: 120px;
+    height: 50px;
 }
 
 .btn-up::before {
     content: "";
-    width: 120px;
-    height: 120px;
+    width: 40px;
+    height: 40px;
     background: transparent no-repeat center center;
-    background-size: 80% 80%;
+    background-size: 100% 100%;
     background-image: url("topBtn2.svg")
 }
 
 .btn-up_hide {
     display: none;
 }
+
+
 .headtr {
     background-color: #b9b9b9;
 }
