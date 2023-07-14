@@ -348,9 +348,9 @@ background-color: white;
     /* выравниваем элементы внутри элемента по центру вдоль главной оси */
     justify-content: center;
     /* ширина элемента */
-    width: 60px;
+    width: 120px;
     /* высота элемента */
-    height: 50px;
+    height: 120px;
 }
 
 .btn-up::before {
