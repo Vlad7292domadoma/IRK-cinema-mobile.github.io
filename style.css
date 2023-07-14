@@ -251,9 +251,9 @@ background-color: white;
 .td1 {
     width: 30vw;
     box-sizing: border-box;
-    padding-left: 4px;
     font-size: 29px;
         text-align: left;
+        padding-left: 3px;
     
 }
 
@@ -262,6 +262,7 @@ background-color: white;
     box-sizing: border-box;
     font-size: 29px;
         text-align: left;
+        padding-left: 7px;
 }
 
 .td3 {
@@ -269,6 +270,7 @@ background-color: white;
     box-sizing: border-box;
     font-size: 29px;
         text-align: left;
+        padding-left: 7px;
 }
 
 .td4 {
@@ -276,6 +278,8 @@ background-color: white;
     box-sizing: border-box;
     font-size: 29px;
         text-align: left;
+        padding-left: 7px;
+        padding-right: 3px;
 }
 
 .correctable {
@@ -284,7 +288,7 @@ background-color: white;
 
 
 .td5 {
-    width: 2.5vw;
+    width: 5vw;
     box-sizing: border-box;
 }
 
