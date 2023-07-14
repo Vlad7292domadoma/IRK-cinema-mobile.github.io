@@ -289,7 +289,7 @@ background-color: white;
 
 
 .td5 {
-    width: 5vw;
+    width: 55px;
     box-sizing: border-box;
     padding: 0%;
         margin: 0%;
@@ -300,8 +300,8 @@ background-color: white;
     position: relative;
         left: 50%;
         transform: translate(-50%, 0);
-  width: 4.5vw;
-   height: 4.2vw;
+  width: 45px;
+   height: 40vw;
   
 
 }
