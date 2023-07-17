@@ -410,18 +410,18 @@ background-color: white;
 
 .divForFilmGenre {
     padding-left: 12px;
-        font-size: 29px;
+        font-size: 20px;
 }
 
 .divForFilmType {
 padding-left: 12px;
-    font-size: 29px;
+    font-size: 20px;
 
 }
 
 .divForFilmComm {
     padding-left: 12px;
-        font-size: 40px;
+        font-size: 30px;
         display: inline;
 }
 .divForBtn {
