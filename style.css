@@ -436,10 +436,12 @@ padding-left: 12px;
     color: gray;
     padding-top: 4px;
     padding-bottom: 1px;
+    font-size: 25px;
 }
 
 .filmType {
     color: gray;
+    font-size: 25px;
 }
 
 .btnInTable {
