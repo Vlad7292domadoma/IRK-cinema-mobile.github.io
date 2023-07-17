@@ -115,8 +115,9 @@ function makeTable() {
             document.getElementsByClassName("divForBtn"+films["Непросмотренные фильмы"][i][0])[0].appendChild(btnForMove)
         }       
 
+    }
 
-
+    if (films["Просмотренные фильмы"].length != 0) {
         const divSeeFilmsText = document.createElement("div");
         divSeeFilmsText.className = "divSeeFilmsText"
         divSeeFilmsText.textContent = "Просмотренные фильмы:"
@@ -185,7 +186,7 @@ function makeTable() {
             filmGenre.className = "filmGenre" + films["Просмотренные фильмы"][i][0]
             filmGenre.classList.add('filmGenre')
 
-            filmGenre.textContent ="Жанр: " + films["Просмотренные фильмы"][i][1]
+            filmGenre.textContent = "Жанр: " + films["Просмотренные фильмы"][i][1]
             document.getElementsByClassName("divForFilmGenre" + films["Просмотренные фильмы"][i][0])[0].appendChild(filmGenre)
 
             filmType = document.createElement("p")
@@ -230,16 +231,16 @@ function makeTable() {
             btnForMove.className = 'btnInTable'
 
             document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0])[0].appendChild(btnForMove)
-        }       
+        }
+
+
+
+    }
 
 
 
 
 
-
-
-
-}
 
 
 
