@@ -1,28 +1,261 @@
 if (JSON.parse(localStorage.getItem('vlad')) !== null) {
     films = JSON.parse(localStorage.getItem('vlad'))
 }
+
+
 else {
     var films = {
         "Непросмотренные фильмы": [],
         "Просмотренные фильмы": [],
     };
 };
+
+
 function makeTable() {
-    let zagolovokUnSeeFilms = document.createElement('h3')
+
+    if (films["Непросмотренные фильмы"].length != 0) {
+
+        const divUnSeeFilmsText = document.createElement("div");
+        divUnSeeFilmsText.className = "divUnSeeFilmsText"
+        divUnSeeFilmsText.textContent = "Непросмотренные фильмы:"
+
+        const divUnSeeFilmsKarto4ki = document.createElement("div");
+        divUnSeeFilmsKarto4ki.className = "divUnSeeFilmsKarto4ki"
+
+        document.getElementsByClassName("contentdiv")[0].appendChild(divUnSeeFilmsText)
+        document.getElementsByClassName("contentdiv")[0].appendChild(divUnSeeFilmsKarto4ki)
+
+        for (let i = 0; i < films["Непросмотренные фильмы"].length; i++) {
+            karto4ka = document.createElement("div")
+            karto4ka.className = films["Непросмотренные фильмы"][i][0] + "karto4ka"; 
+            karto4ka.classList.add("karto4ka")
+            document.getElementsByClassName("divUnSeeFilmsKarto4ki")[0].appendChild(karto4ka)
+
+            divForText = document.createElement("div")
+            divForText.className = "divForText" + films["Непросмотренные фильмы"][i][0]
+            divForText.classList.add("divForText")
+
+            document.getElementsByClassName(films["Непросмотренные фильмы"][i][0] + "karto4ka")[0].appendChild(divForText)
+
+            divForFilmName = document.createElement("div")
+            divForFilmName.className = "divForFilmName" + films["Непросмотренные фильмы"][i][0]
+            divForFilmName.classList.add("divForFilmName")
+
+            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0])[0].appendChild(divForFilmName)
+
+            divForFilmGenre = document.createElement("div")
+            divForFilmGenre.className = "divForFilmGenre" + films["Непросмотренные фильмы"][i][0]
+            divForFilmGenre.classList.add("divForFilmGenre")
+
+            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0])[0].appendChild(divForFilmGenre)
+
+            divForFilmType = document.createElement("div")
+            divForFilmType.className = "divForFilmType" + films["Непросмотренные фильмы"][i][0]
+            divForFilmType.classList.add("divForFilmType")
+
+            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0])[0].appendChild(divForFilmType)
+
+            divForFilmComm = document.createElement("div")
+            divForFilmComm.className = "divForFilmComm" + films["Непросмотренные фильмы"][i][0]
+            divForFilmComm.textContent = 'Комментарий: '
+            divForFilmComm.classList.add("divForFilmComm")
+
+            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0])[0].appendChild(divForFilmComm)
+
+            filmName = document.createElement("p")
+            filmName.className = "filmName" + films["Непросмотренные фильмы"][i][0]
+            filmName.textContent = films["Непросмотренные фильмы"][i][0]
+            document.getElementsByClassName("divForFilmName" + films["Непросмотренные фильмы"][i][0])[0].appendChild(filmName)
+
+            filmGenre = document.createElement("p")
+            filmGenre.className = "filmGenre" + films["Непросмотренные фильмы"][i][0]
+            filmGenre.classList.add('filmGenre')
+            filmGenre.textContent = "Жанр: " + films["Непросмотренные фильмы"][i][1]
+            document.getElementsByClassName("divForFilmGenre" + films["Непросмотренные фильмы"][i][0])[0].appendChild(filmGenre)
+
+            filmType = document.createElement("p")
+            filmType.className = "filmType" + films["Непросмотренные фильмы"][i][0]
+            filmType.classList.add('filmType')
+
+            filmType.textContent ="Тип: " + films["Непросмотренные фильмы"][i][2]
+            document.getElementsByClassName("divForFilmType" + films["Непросмотренные фильмы"][i][0])[0].appendChild(filmType)
+
+            filmComm = document.createElement("td")
+            filmComm.className = films["Непросмотренные фильмы"][i][0]
+            filmComm.classList.add("correctable")
+            filmComm.id = films["Непросмотренные фильмы"][i][0]
+            filmComm.textContent = films["Непросмотренные фильмы"][i][3]
+            document.getElementsByClassName("divForFilmComm" + films["Непросмотренные фильмы"][i][0])[0].appendChild(filmComm)
+
+            //filmCommplaceholder = document.createElement("td")
+
+ 
+
+
+
+
+
+
+
+
+
+            divForBtn = document.createElement("div")
+            divForBtn.className = "divForBtn" + films["Непросмотренные фильмы"][i][0]
+            divForBtn.classList.add("divForBtn")
+            document.getElementsByClassName(films["Непросмотренные фильмы"][i][0] + "karto4ka")[0].appendChild(divForBtn)
+
+            tdbtnForMove = document.createElement("td")
+            tdbtnForMove.className = films["Непросмотренные фильмы"][i][0]
+            tdbtnForMove.classList.add("btnTd")
+            document.getElementsByClassName("divForBtn" + films["Непросмотренные фильмы"][i][0])[0].appendChild(tdbtnForMove)
+
+            btnForMove = document.createElement("button")
+            btnForMove.className = 'btnInTable'
+            btnForMove.textContent = "Переместить в `просмотренные`"
+            document.getElementsByClassName("divForBtn"+films["Непросмотренные фильмы"][i][0])[0].appendChild(btnForMove)
+        }       
+
+
+
+        const divSeeFilmsText = document.createElement("div");
+        divSeeFilmsText.className = "divSeeFilmsText"
+        divSeeFilmsText.textContent = "Просмотренные фильмы:"
+
+        const divSeeFilmsKarto4ki = document.createElement("div");
+        divSeeFilmsKarto4ki.className = "divSeeFilmsKarto4ki"
+
+        document.getElementsByClassName("contentdiv")[0].appendChild(divSeeFilmsText)
+        document.getElementsByClassName("contentdiv")[0].appendChild(divSeeFilmsKarto4ki)
+
+
+
+
+
+
+
+
+
+
+
+
+
+        for (let i = 0; i < films["Просмотренные фильмы"].length; i++) {
+            karto4ka = document.createElement("div")
+            karto4ka.className = films["Просмотренные фильмы"][i][0] + "karto4ka";
+            karto4ka.classList.add("karto4ka")
+            document.getElementsByClassName("divSeeFilmsKarto4ki")[0].appendChild(karto4ka)
+
+            divForText = document.createElement("div")
+            divForText.className = "divForText" + films["Просмотренные фильмы"][i][0]
+            divForText.classList.add("divForText")
+
+            document.getElementsByClassName(films["Просмотренные фильмы"][i][0] + "karto4ka")[0].appendChild(divForText)
+
+            divForFilmName = document.createElement("div")
+            divForFilmName.className = "divForFilmName" + films["Просмотренные фильмы"][i][0]
+            divForFilmName.classList.add("divForFilmName")
+
+            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0])[0].appendChild(divForFilmName)
+
+            divForFilmGenre = document.createElement("div")
+            divForFilmGenre.className = "divForFilmGenre" + films["Просмотренные фильмы"][i][0]
+            divForFilmGenre.classList.add("divForFilmGenre")
+
+            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0])[0].appendChild(divForFilmGenre)
+
+            divForFilmType = document.createElement("div")
+            divForFilmType.className = "divForFilmType" + films["Просмотренные фильмы"][i][0]
+            divForFilmType.classList.add("divForFilmType")
+
+            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0])[0].appendChild(divForFilmType)
+
+            divForFilmComm = document.createElement("div")
+            divForFilmComm.className = "divForFilmComm" + films["Просмотренные фильмы"][i][0]
+            divForFilmComm.textContent = 'Комментарий: '
+            divForFilmComm.classList.add("divForFilmComm")
+
+            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0])[0].appendChild(divForFilmComm)
+
+            filmName = document.createElement("p")
+            filmName.className = "filmName" + films["Просмотренные фильмы"][i][0]
+            filmName.textContent = films["Просмотренные фильмы"][i][0]
+            document.getElementsByClassName("divForFilmName" + films["Просмотренные фильмы"][i][0])[0].appendChild(filmName)
+
+            filmGenre = document.createElement("p")
+            filmGenre.className = "filmGenre" + films["Просмотренные фильмы"][i][0]
+            filmGenre.classList.add('filmGenre')
+
+            filmGenre.textContent ="Жанр: " + films["Просмотренные фильмы"][i][1]
+            document.getElementsByClassName("divForFilmGenre" + films["Просмотренные фильмы"][i][0])[0].appendChild(filmGenre)
+
+            filmType = document.createElement("p")
+            filmType.className = "filmType" + films["Просмотренные фильмы"][i][0]
+            filmType.classList.add('filmType')
+
+            filmType.textContent = "Тип: " + films["Просмотренные фильмы"][i][2]
+            document.getElementsByClassName("divForFilmType" + films["Просмотренные фильмы"][i][0])[0].appendChild(filmType)
+
+            filmComm = document.createElement("td")
+            filmComm.className = films["Просмотренные фильмы"][i][0]
+            filmComm.classList.add("correctable")
+            filmComm.id = films["Просмотренные фильмы"][i][0]
+            filmComm.textContent = films["Просмотренные фильмы"][i][3]
+            document.getElementsByClassName("divForFilmComm" + films["Просмотренные фильмы"][i][0])[0].appendChild(filmComm)
+
+
+
+
+
+
+
+
+
+
+
+
+
+            divForBtn = document.createElement("div")
+            divForBtn.className = "divForBtn" + films["Просмотренные фильмы"][i][0]
+            divForBtn.classList.add("divForBtn")
+
+            document.getElementsByClassName(films["Просмотренные фильмы"][i][0] + "karto4ka")[0].appendChild(divForBtn)
+
+            tdbtnForMove = document.createElement("td")
+            tdbtnForMove.className = films["Просмотренные фильмы"][i][0]
+            tdbtnForMove.classList.add("btnTd")
+            document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0])[0].appendChild(tdbtnForMove)
+
+            btnForMove = document.createElement("button")
+            btnForMove.textContent = "Удалить фильм из базы"
+            btnForMove.className = 'btnInTable'
+
+            document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0])[0].appendChild(btnForMove)
+        }       
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*    let zagolovokUnSeeFilms = document.createElement('h3')
     zagolovokUnSeeFilms.className = "zagolovokUnSeeFilmsClass"
-    zagolovokUnSeeFilms.textContent = "Непросмотренные фильмы"
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    zagolovokUnSeeFilms.textContent = "Непросмотренные фильмы"  
     
     document.querySelector("#divUnSeeFilmsText").appendChild(zagolovokUnSeeFilms)
 
@@ -111,11 +344,13 @@ function makeTable() {
 
 
 
-
+*/
 
 
 
 }
+ 
+
 let btnMove = function () {
     var result = Array.from(document.querySelectorAll('button'));   
     for (let i = 0; i < result.length; i++) {
@@ -148,6 +383,8 @@ let btnMove = function () {
     }
 };
 
+
+
 let writeCorrectTd = function () {
     let correctTdText = localStorage.getItem("correctTdText")
     let correctTdID = localStorage.getItem("correctTdID")
@@ -162,16 +399,10 @@ let writeCorrectTd = function () {
             films["Просмотренные фильмы"][i][3] = correctTdText
         }
     }
-
-
-
-
-
-
-
     localStorage.setItem('vlad', JSON.stringify(films))
     location.reload()
 }
+
 
 document.getElementsByClassName("correctable")
 let commChangeFn = function () {
@@ -190,26 +421,18 @@ let commChangeFn = function () {
                 let correctTdText = this.value
                 localStorage.setItem("correctTdText", correctTdText)
                 localStorage.setItem("correctTdID", correctTdID)
-
                 writeCorrectTd()
-
-
-
-
-
             });
-            this.removeEventListener('click', func);
-            
-           
+            this.removeEventListener('click', func);           
         });
-
         var newCorrectable = document.getElementsByClassName("correctable")
         localStorage.setItem('vlad3', JSON.stringify(newCorrectable))
         JSON.parse(localStorage.getItem('vlad3'))
     }
 
     
-     };
+};
+     
 
 let addNewFilm = function () {
     let massiveNewFilm = [document.querySelector("#inputnm").value,
@@ -230,6 +453,7 @@ let addNewFilm = function () {
     location.reload()
 }
 
+
 let zametkiBlock = function () {
     const tempp = document.getElementById("areawithText")
     tempp.addEventListener('blur', function () {
@@ -241,6 +465,7 @@ let zametkiBlock = function () {
         document.getElementById('areawithText').value = JSON.parse(localStorage.getItem('vlad1'))
     }
 }
+
 
 let fndInputFunction = function () {
     if (document.getElementById("findnm").value.length ==2 ) {
@@ -255,6 +480,7 @@ let fndInputFunction = function () {
     }
 
 }
+
 
 let addOptionsToDatabase = function () {
     document.getElementById("datalistfilms").innerHTML = ''
@@ -293,6 +519,7 @@ document.querySelector('#addBtn').onclick = function () {
         addNewFilm()
     }
 }
+
 
 document.querySelector('#findbtn').onclick = function () {
     var tmpValue = document.querySelector("#findgenre").value;
@@ -385,12 +612,6 @@ document.querySelector('#findbtn').onclick = function () {
 }
 }
 
-window.onload = () => {
-    zametkiBlock()
-    
-
-
-}
 
 const btnUp = {
     el: document.querySelector('.btn-up'),
@@ -422,6 +643,7 @@ const btnUp = {
     }
 }
 
+
 btnUp.addEventListener();
 
 document.getElementsByClassName('saveFilmsBtn')[0].onclick = function () {
@@ -431,19 +653,12 @@ document.getElementsByClassName('saveFilmsBtn')[0].onclick = function () {
     this.download = 'IRK cinema films.txt';
 };
 
-document.getElementsByClassName('importFilmsBtn')[0].onclick = function () {
-//let importFilmsList = prompt("Скопируйте список фильмов и вставьте в это поле:")
-    
+
+document.getElementsByClassName('importFilmsBtn')[0].onclick = function () {    
     films = JSON.parse(prompt("Скопируйте список фильмов и вставьте в это поле:"))
-    if (films) {
-    
+    if (films) {    
         localStorage.setItem('vlad', JSON.stringify(films))
-
     }
-
-
-    
-
     location.reload()
 };
 
@@ -458,3 +673,12 @@ document.getElementsByClassName('importFilmsBtn')[0].onclick = function () {
 
 
 
+
+
+
+const divElements = document.querySelectorAll('p');
+divElements.forEach((p) => {
+    p.style.marginTop = 0;
+    p.style.marginBottom = 0;
+
+});
