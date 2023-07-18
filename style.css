@@ -416,28 +416,29 @@
     box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.705);
     margin-top: 12px;
     display: flex;
+    padding-bottom: 1px;
 }
 
 .divForFilmName {
     padding-left: 12px;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 550;
 }
 
 .divForFilmGenre {
     padding-left: 12px;
-    font-size: 15px;
+    font-size: 30px;
 }
 
 .divForFilmType {
     padding-left: 12px;
-    font-size: 15px;
+    font-size: 30px;
 
 }
 
 .divForFilmComm {
     padding-left: 12px;
-    font-size: 19px;
+    font-size: 30px;
     display: inline;
 }
 
@@ -448,12 +449,12 @@
 
 .filmGenre {
     color: gray;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 .filmType {
     color: gray;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 .btnInTable {
@@ -495,7 +496,7 @@
     width: 100vw;
     height: 60px;
     text-align: center;
-    font-size: 12px;
+    font-size: 22px;
 
     background-color: #ff5900b2;
     border-radius: 10px;
