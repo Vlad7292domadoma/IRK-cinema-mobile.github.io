@@ -17,6 +17,7 @@ function makeTable() {
 
         const divUnSeeFilmsText = document.createElement("div");
         divUnSeeFilmsText.className = "divUnSeeFilmsText"
+        divUnSeeFilmsText.id = "divUnSeeFilmsText"
         divUnSeeFilmsText.textContent = "Непросмотренные фильмы:"
 
         const divUnSeeFilmsKarto4ki = document.createElement("div");
@@ -84,11 +85,20 @@ function makeTable() {
             filmComm.className = films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             filmComm.classList.add("correctable")
             filmComm.id = films["Непросмотренные фильмы"][i][0]
-            filmComm.textContent = films["Непросмотренные фильмы"][i][3]
-            document.getElementsByClassName("divForFilmComm" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmComm)
 
-            //filmCommplaceholder = document.createElement("td")
 
+            if (films["Непросмотренные фильмы"][i][3]) {
+                filmComm.textContent = films["Непросмотренные фильмы"][i][3]
+                document.getElementsByClassName("divForFilmComm" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmComm)
+            }
+            if (!films["Непросмотренные фильмы"][i][3]) {
+                filmComm.textContent = '                                     '
+                document.getElementsByClassName("divForFilmComm" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmComm)
+
+
+
+
+            }
  
 
 
@@ -111,7 +121,7 @@ function makeTable() {
 
             btnForMove = document.createElement("button")
             btnForMove.className = 'btnInTable'
-            btnForMove.textContent = "Переместить в `просмотренные`"
+            btnForMove.textContent = "↓";
             document.getElementsByClassName("divForBtn" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(btnForMove)
         }       
 
@@ -200,7 +210,9 @@ function makeTable() {
             filmComm.className = films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             filmComm.classList.add("correctable")
             filmComm.id = films["Просмотренные фильмы"][i][0]
-            filmComm.textContent = films["Просмотренные фильмы"][i][3]
+            
+            
+filmComm.textContent = films["Просмотренные фильмы"][i][3]
             document.getElementsByClassName("divForFilmComm" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmComm)
 
 
@@ -227,7 +239,7 @@ function makeTable() {
             document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(tdbtnForMove)
 
             btnForMove = document.createElement("button")
-            btnForMove.textContent = "Удалить фильм из базы"
+            btnForMove.textContent = "Х"
             btnForMove.className = 'btnInTable'
 
             document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(btnForMove)
@@ -630,7 +642,7 @@ const btnUp = {
             // определяем величину прокрутки
             const scrollY = window.scrollY || document.documentElement.scrollTop;
             // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
-            scrollY > 80 ? this.show() : this.hide();
+            scrollY > 100 ? this.show() : this.hide();
         });
         // при нажатии на кнопку .btn-up
         document.querySelector('.btn-up').onclick = () => {
@@ -682,4 +694,34 @@ divElements.forEach((p) => {
     p.style.marginTop = 0;
     p.style.marginBottom = 0;
 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.addEventListener('scroll', function () {
+    var div = document.getElementById('divPerehodKProsmotrennym');
+    if (window.scrollY > 100) {
+        div.style.display = 'none';
+    } else {
+        div.style.display = 'block';
+    }
 });
