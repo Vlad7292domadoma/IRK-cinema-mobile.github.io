@@ -239,7 +239,7 @@ filmComm.textContent = films["Просмотренные фильмы"][i][3]
             document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(tdbtnForMove)
 
             btnForMove = document.createElement("button")
-            btnForMove.textContent = "Х"
+            btnForMove.textContent = "x"
             btnForMove.className = 'btnInTable'
 
             document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(btnForMove)
