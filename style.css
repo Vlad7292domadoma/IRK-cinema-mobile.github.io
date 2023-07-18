@@ -462,9 +462,9 @@
     font-size: 22px;
     padding: 0%;
     position: relative;
-        left: 50%;
-        top: 10%;
-        transform: translate(-40%, 0);
+    left: 50%;
+    top: 10%;
+    transform: translate(-40%, 0);
 }
 
 .divForText {
@@ -490,13 +490,13 @@
 
 .divPerehodKProsmotrennym {
     position: fixed;
-        bottom: 0;
-                width: 600px;
-                height: 60px;
-text-align: center;  
-  font-size: 12px;
-  
-        background-color:#ff5900b2;
-margin-left: 18vw;
-border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    text-align: center;
+    font-size: 12px;
+
+    background-color: #ff5900b2;
+    border-radius: 10px;
 }
