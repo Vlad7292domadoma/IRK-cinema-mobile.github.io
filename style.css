@@ -419,7 +419,7 @@
 
 .divForFilmName {
     padding-left: 12px;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 550;
 }
 
@@ -436,7 +436,7 @@
 
 .divForFilmComm {
     padding-left: 12px;
-    font-size: 12px;
+    font-size: 16px;
     display: inline;
 }
 
@@ -450,12 +450,12 @@
 
 .filmGenre {
     color: gray;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .filmType {
     color: gray;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .btnInTable {
