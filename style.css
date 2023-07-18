@@ -1,17 +1,19 @@
 .bodyClass {
-background-image: linear-gradient(rgb(161, 161, 161), rgb(71, 71, 71), rgb(22, 22, 22));    margin-top: 0;
+    background-image: linear-gradient(rgb(161, 161, 161), rgb(71, 71, 71), rgb(22, 22, 22));
     margin-top: 0;
-        margin-bottom: 100vh;
-        margin-left: 0;
-        margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 100vh;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .ownDiv {
-position: relative;
-margin-top: 130px;
-margin-left: 25px;
-margin-right: 25px;
+    position: relative;
+    margin-top: 130px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
+
 .topTextDiv {
     height: 130px;
     background-image: linear-gradient(#ff5900, #ff5900a6, #e0962709);
@@ -19,28 +21,28 @@ margin-right: 25px;
     position: fixed;
     top: 0%;
     left: 0%;
-display: table;
-z-index: 1000;
+    display: table;
+    z-index: 1000;
 
 }
 
 .labelDiv {
-display: table-cell;
+    display: table-cell;
 }
 
 .label {
     font-size: 46px;
     margin: 0%;
     margin-left: 20px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0%;
 }
 
 .exportFilmsDiv {
-display: table-cell;
-float:right;
-margin-right: 20px;
-display: table;
+    display: table-cell;
+    float: right;
+    margin-right: 20px;
+    display: table;
 }
 
 .saveFilmsBtn {
@@ -52,13 +54,14 @@ display: table;
 
 .importFilmsBtn {
     font-size: 30px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #353535;}
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #353535;
+}
 
 .saveFilmDiv {
     display: table-cell;
     padding-right: 30px;
-    
+
 }
 
 .importFilmDiv {
@@ -79,59 +82,65 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
 #inputdiv {
-  margin-right: 25px;
-  margin-left: 25px;
-  padding: 0;
+    margin-right: 25px;
+    margin-left: 25px;
+    padding: 0;
 
 }
+
 .addFilmText {
     font-size: 37px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        margin-bottom: 15px;
-        text-align: center;        
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+    text-align: center;
 }
+
 #inputnm {
     width: 100.1%;
     height: 70px;
-    padding:0%;
+    padding: 0%;
     font-size: 30px;
     text-indent: 15px;
-        box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
 }
+
 #inputgnr {
-width: 100.4%;
+    width: 100.4%;
     height: 70px;
     padding: 0%;
     font-size: 30px;
     text-indent: 15px;
     color: rgb(104, 104, 104);
-        box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
-        background-color: white;
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+    background-color: white;
 }
+
 #inputtype {
     width: 100.4%;
-        height: 70px;
-        padding: 0%;
-        font-size: 30px;
-        text-indent: 15px;
-        color: rgb(104, 104, 104);
-                background-color: white;
-            box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+    height: 70px;
+    padding: 0%;
+    font-size: 30px;
+    text-indent: 15px;
+    color: rgb(104, 104, 104);
+    background-color: white;
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
 }
+
 #inputcomm {
-        width: 100.1%;
-            height: 70px;
-            padding: 0%;
-            font-size: 30px;
-            text-indent: 15px;
-                box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+    width: 100.1%;
+    height: 70px;
+    padding: 0%;
+    font-size: 30px;
+    text-indent: 15px;
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
 }
+
 #addBtn {
-width: 100.4%;
+    width: 100.4%;
     height: 70px;
     padding: 0%;
     font-size: 32px;
-        box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
 }
 
 
@@ -146,29 +155,32 @@ width: 100.4%;
 
 
 #finddiv {
-margin-right: 25px;
+    margin-right: 25px;
     margin-left: 25px;
     padding: 0;
 }
+
 .findFilmText {
     font-size: 36px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        margin: 0%;
-        margin-bottom: 15px;
-        text-align: center;
-        margin-top: 39px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0%;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 39px;
 }
+
 #findnm {
     width: 100.1%;
-        height: 70px;
-        padding: 0%;
-        font-size: 30px;
-        text-indent: 15px;
-        box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
-        
+    height: 70px;
+    padding: 0%;
+    font-size: 30px;
+    text-indent: 15px;
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+
 }
+
 #findgenre {
-width: 100.4%;
+    width: 100.4%;
     height: 70px;
     padding: 0%;
     font-size: 30px;
@@ -177,8 +189,9 @@ width: 100.4%;
     box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
     background-color: white;
 }
+
 #findtype {
-width: 100.4%;
+    width: 100.4%;
     height: 70px;
     padding: 0%;
     font-size: 30px;
@@ -188,8 +201,9 @@ width: 100.4%;
     background-color: white;
 
 }
+
 #findbtn {
-width: 100.4%;
+    width: 100.4%;
     height: 70px;
     padding: 0%;
     font-size: 32px;
@@ -204,13 +218,13 @@ width: 100.4%;
 
 #contentdiv {
     margin-right: 25px;
-            margin-left: 25px;
+    margin-left: 25px;
 }
 
 
 
 .zagolovokUnSeeFilmsClass {
-font-size: 36px;
+    font-size: 36px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0%;
     margin-bottom: 10px;
@@ -220,28 +234,28 @@ font-size: 36px;
 
 .zagolovokSeeFilms {
     font-size: 36px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        margin: 0%;
-        margin-bottom: 10px;
-        text-align: center;
-        margin-top: 39px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0%;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 39px;
 }
 
 .whiteTr {
-background-color: white;
+    background-color: white;
     box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
 
 
     font-size: 29px;
-        text-align: left;
-    
+    text-align: left;
+
 }
 
 .greyTr {
     background-color: #f8f8f8;
-        box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
-        font-size: 29px;
-            text-align: left;
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.4);
+    font-size: 29px;
+    text-align: left;
 }
 
 
@@ -253,34 +267,34 @@ background-color: white;
     width: 30vw;
     box-sizing: border-box;
     font-size: 29px;
-        text-align: left;
-        padding-left: 3px;
-    
+    text-align: left;
+    padding-left: 3px;
+
 }
 
 .td2 {
     width: 15vw;
     box-sizing: border-box;
     font-size: 29px;
-        text-align: left;
-        padding-left: 7px;
+    text-align: left;
+    padding-left: 7px;
 }
 
 .td3 {
     width: 15vw;
     box-sizing: border-box;
     font-size: 29px;
-        text-align: left;
-        padding-left: 7px;
+    text-align: left;
+    padding-left: 7px;
 }
 
 .td4 {
     width: 30vw;
     box-sizing: border-box;
     font-size: 29px;
-        text-align: left;
-        padding-left: 7px;
-        padding-right: 3px;
+    text-align: left;
+    padding-left: 7px;
+    padding-right: 3px;
 }
 
 .correctable {
@@ -292,19 +306,19 @@ background-color: white;
     width: 55px;
     box-sizing: border-box;
     padding: 0%;
-        margin: 0%;
-        padding-top: 2px;
+    margin: 0%;
+    padding-top: 2px;
 }
 
 .tableBtn {
     position: relative;
-        left: 50%;
-        transform: translate(-50%, 0);
-  width: 45px;
-   height: 45px;
-        margin-right: 5px;
-    
-   margin-left: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+
+    margin-left: 5px;
 
 }
 
@@ -378,57 +392,59 @@ background-color: white;
 
 .contentdiv {
     position: relative;
-        margin-left: 25px;
-        margin-right: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
+
 .divUnSeeFilmsText {
     font-size: 45px;
-        text-align: center;
-        padding-top: 20px;
+    text-align: center;
+    padding-top: 20px;
     font-weight: 600;
 }
 
 .divSeeFilmsText {
     font-size: 45px;
-        text-align: center;
-        padding-top: 20px;
-        font-weight: 600;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 600;
 }
 
 .karto4ka {
     background-color: white;
     border-radius: 5px;
-                box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.705);
-                margin-top: 12px;
+    box-shadow: 10px 10px 12px rgba(73, 73, 73, 0.705);
+    margin-top: 12px;
 }
 
 .divForFilmName {
     padding-left: 12px;
     font-size: 17px;
-            font-weight: 550;
+    font-weight: 550;
 }
 
 .divForFilmGenre {
     padding-left: 12px;
-        font-size: 15px;
+    font-size: 15px;
 }
 
 .divForFilmType {
-padding-left: 12px;
+    padding-left: 12px;
     font-size: 15px;
 
 }
 
 .divForFilmComm {
     padding-left: 12px;
-        font-size: 12px;
-        display: inline;
+    font-size: 12px;
+    display: inline;
 }
+
 .divForBtn {
     display: block;
-    
+
     align-content: center;
-        padding-top: 4px;
+    padding-top: 4px;
 }
 
 
