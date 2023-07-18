@@ -27,65 +27,65 @@ function makeTable() {
 
         for (let i = 0; i < films["Непросмотренные фильмы"].length; i++) {
             karto4ka = document.createElement("div")
-            karto4ka.className = films["Непросмотренные фильмы"][i][0] + "karto4ka"; 
+            karto4ka.className = films["Непросмотренные фильмы"][i][0].replace(/\s/g, "") + "karto4ka"; 
             karto4ka.classList.add("karto4ka")
             document.getElementsByClassName("divUnSeeFilmsKarto4ki")[0].appendChild(karto4ka)
 
             divForText = document.createElement("div")
-            divForText.className = "divForText" + films["Непросмотренные фильмы"][i][0]
+            divForText.className = "divForText" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             divForText.classList.add("divForText")
 
-            document.getElementsByClassName(films["Непросмотренные фильмы"][i][0] + "karto4ka")[0].appendChild(divForText)
+            document.getElementsByClassName(films["Непросмотренные фильмы"][i][0].replace(/\s/g, "") + "karto4ka")[0].appendChild(divForText)
 
             divForFilmName = document.createElement("div")
-            divForFilmName.className = "divForFilmName" + films["Непросмотренные фильмы"][i][0]
+            divForFilmName.className = "divForFilmName" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             divForFilmName.classList.add("divForFilmName")
 
-            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0])[0].appendChild(divForFilmName)
+            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(divForFilmName)
 
             divForFilmGenre = document.createElement("div")
-            divForFilmGenre.className = "divForFilmGenre" + films["Непросмотренные фильмы"][i][0]
+            divForFilmGenre.className = "divForFilmGenre" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             divForFilmGenre.classList.add("divForFilmGenre")
 
-            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0])[0].appendChild(divForFilmGenre)
+            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(divForFilmGenre)
 
             divForFilmType = document.createElement("div")
-            divForFilmType.className = "divForFilmType" + films["Непросмотренные фильмы"][i][0]
+            divForFilmType.className = "divForFilmType" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             divForFilmType.classList.add("divForFilmType")
 
-            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0])[0].appendChild(divForFilmType)
+            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(divForFilmType)
 
             divForFilmComm = document.createElement("div")
-            divForFilmComm.className = "divForFilmComm" + films["Непросмотренные фильмы"][i][0]
+            divForFilmComm.className = "divForFilmComm" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             divForFilmComm.textContent = 'Комментарий: '
             divForFilmComm.classList.add("divForFilmComm")
 
-            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0])[0].appendChild(divForFilmComm)
+            document.getElementsByClassName("divForText" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(divForFilmComm)
 
             filmName = document.createElement("p")
-            filmName.className = "filmName" + films["Непросмотренные фильмы"][i][0]
+            filmName.className = "filmName" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             filmName.textContent = films["Непросмотренные фильмы"][i][0]
-            document.getElementsByClassName("divForFilmName" + films["Непросмотренные фильмы"][i][0])[0].appendChild(filmName)
+            document.getElementsByClassName("divForFilmName" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmName)
 
             filmGenre = document.createElement("p")
-            filmGenre.className = "filmGenre" + films["Непросмотренные фильмы"][i][0]
+            filmGenre.className = "filmGenre" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             filmGenre.classList.add('filmGenre')
             filmGenre.textContent = "Жанр: " + films["Непросмотренные фильмы"][i][1]
-            document.getElementsByClassName("divForFilmGenre" + films["Непросмотренные фильмы"][i][0])[0].appendChild(filmGenre)
+            document.getElementsByClassName("divForFilmGenre" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmGenre)
 
             filmType = document.createElement("p")
-            filmType.className = "filmType" + films["Непросмотренные фильмы"][i][0]
+            filmType.className = "filmType" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             filmType.classList.add('filmType')
 
             filmType.textContent ="Тип: " + films["Непросмотренные фильмы"][i][2]
-            document.getElementsByClassName("divForFilmType" + films["Непросмотренные фильмы"][i][0])[0].appendChild(filmType)
+            document.getElementsByClassName("divForFilmType" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmType)
 
             filmComm = document.createElement("td")
-            filmComm.className = films["Непросмотренные фильмы"][i][0]
+            filmComm.className = films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             filmComm.classList.add("correctable")
             filmComm.id = films["Непросмотренные фильмы"][i][0]
             filmComm.textContent = films["Непросмотренные фильмы"][i][3]
-            document.getElementsByClassName("divForFilmComm" + films["Непросмотренные фильмы"][i][0])[0].appendChild(filmComm)
+            document.getElementsByClassName("divForFilmComm" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmComm)
 
             //filmCommplaceholder = document.createElement("td")
 
@@ -100,19 +100,19 @@ function makeTable() {
 
 
             divForBtn = document.createElement("div")
-            divForBtn.className = "divForBtn" + films["Непросмотренные фильмы"][i][0]
+            divForBtn.className = "divForBtn" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             divForBtn.classList.add("divForBtn")
-            document.getElementsByClassName(films["Непросмотренные фильмы"][i][0] + "karto4ka")[0].appendChild(divForBtn)
+            document.getElementsByClassName(films["Непросмотренные фильмы"][i][0].replace(/\s/g, "") + "karto4ka")[0].appendChild(divForBtn)
 
             tdbtnForMove = document.createElement("td")
-            tdbtnForMove.className = films["Непросмотренные фильмы"][i][0]
+            tdbtnForMove.className = films["Непросмотренные фильмы"][i][0].replace(/\s/g, "")
             tdbtnForMove.classList.add("btnTd")
-            document.getElementsByClassName("divForBtn" + films["Непросмотренные фильмы"][i][0])[0].appendChild(tdbtnForMove)
+            document.getElementsByClassName("divForBtn" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(tdbtnForMove)
 
             btnForMove = document.createElement("button")
             btnForMove.className = 'btnInTable'
             btnForMove.textContent = "Переместить в `просмотренные`"
-            document.getElementsByClassName("divForBtn"+films["Непросмотренные фильмы"][i][0])[0].appendChild(btnForMove)
+            document.getElementsByClassName("divForBtn" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(btnForMove)
         }       
 
     }
@@ -142,66 +142,66 @@ function makeTable() {
 
         for (let i = 0; i < films["Просмотренные фильмы"].length; i++) {
             karto4ka = document.createElement("div")
-            karto4ka.className = films["Просмотренные фильмы"][i][0] + "karto4ka";
+            karto4ka.className = films["Просмотренные фильмы"][i][0].replace(/\s/g, "") + "karto4ka";
             karto4ka.classList.add("karto4ka")
             document.getElementsByClassName("divSeeFilmsKarto4ki")[0].appendChild(karto4ka)
 
             divForText = document.createElement("div")
-            divForText.className = "divForText" + films["Просмотренные фильмы"][i][0]
+            divForText.className = "divForText" + films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             divForText.classList.add("divForText")
 
-            document.getElementsByClassName(films["Просмотренные фильмы"][i][0] + "karto4ka")[0].appendChild(divForText)
+            document.getElementsByClassName(films["Просмотренные фильмы"][i][0].replace(/\s/g, "") + "karto4ka")[0].appendChild(divForText)
 
             divForFilmName = document.createElement("div")
-            divForFilmName.className = "divForFilmName" + films["Просмотренные фильмы"][i][0]
+            divForFilmName.className = "divForFilmName" + films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             divForFilmName.classList.add("divForFilmName")
 
-            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0])[0].appendChild(divForFilmName)
+            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(divForFilmName)
 
             divForFilmGenre = document.createElement("div")
-            divForFilmGenre.className = "divForFilmGenre" + films["Просмотренные фильмы"][i][0]
+            divForFilmGenre.className = "divForFilmGenre" + films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             divForFilmGenre.classList.add("divForFilmGenre")
 
-            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0])[0].appendChild(divForFilmGenre)
+            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(divForFilmGenre)
 
             divForFilmType = document.createElement("div")
-            divForFilmType.className = "divForFilmType" + films["Просмотренные фильмы"][i][0]
+            divForFilmType.className = "divForFilmType" + films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             divForFilmType.classList.add("divForFilmType")
 
-            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0])[0].appendChild(divForFilmType)
+            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(divForFilmType)
 
             divForFilmComm = document.createElement("div")
-            divForFilmComm.className = "divForFilmComm" + films["Просмотренные фильмы"][i][0]
+            divForFilmComm.className = "divForFilmComm" + films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             divForFilmComm.textContent = 'Комментарий: '
             divForFilmComm.classList.add("divForFilmComm")
 
-            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0])[0].appendChild(divForFilmComm)
+            document.getElementsByClassName("divForText" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(divForFilmComm)
 
             filmName = document.createElement("p")
-            filmName.className = "filmName" + films["Просмотренные фильмы"][i][0]
+            filmName.className = "filmName" + films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             filmName.textContent = films["Просмотренные фильмы"][i][0]
-            document.getElementsByClassName("divForFilmName" + films["Просмотренные фильмы"][i][0])[0].appendChild(filmName)
+            document.getElementsByClassName("divForFilmName" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmName)
 
             filmGenre = document.createElement("p")
-            filmGenre.className = "filmGenre" + films["Просмотренные фильмы"][i][0]
+            filmGenre.className = "filmGenre" + films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             filmGenre.classList.add('filmGenre')
 
             filmGenre.textContent = "Жанр: " + films["Просмотренные фильмы"][i][1]
-            document.getElementsByClassName("divForFilmGenre" + films["Просмотренные фильмы"][i][0])[0].appendChild(filmGenre)
+            document.getElementsByClassName("divForFilmGenre" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmGenre)
 
             filmType = document.createElement("p")
-            filmType.className = "filmType" + films["Просмотренные фильмы"][i][0]
+            filmType.className = "filmType" + films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             filmType.classList.add('filmType')
 
             filmType.textContent = "Тип: " + films["Просмотренные фильмы"][i][2]
-            document.getElementsByClassName("divForFilmType" + films["Просмотренные фильмы"][i][0])[0].appendChild(filmType)
+            document.getElementsByClassName("divForFilmType" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmType)
 
             filmComm = document.createElement("td")
-            filmComm.className = films["Просмотренные фильмы"][i][0]
+            filmComm.className = films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             filmComm.classList.add("correctable")
             filmComm.id = films["Просмотренные фильмы"][i][0]
             filmComm.textContent = films["Просмотренные фильмы"][i][3]
-            document.getElementsByClassName("divForFilmComm" + films["Просмотренные фильмы"][i][0])[0].appendChild(filmComm)
+            document.getElementsByClassName("divForFilmComm" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(filmComm)
 
 
 
@@ -216,21 +216,21 @@ function makeTable() {
 
 
             divForBtn = document.createElement("div")
-            divForBtn.className = "divForBtn" + films["Просмотренные фильмы"][i][0]
+            divForBtn.className = "divForBtn" + films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             divForBtn.classList.add("divForBtn")
 
-            document.getElementsByClassName(films["Просмотренные фильмы"][i][0] + "karto4ka")[0].appendChild(divForBtn)
+            document.getElementsByClassName(films["Просмотренные фильмы"][i][0].replace(/\s/g, "") + "karto4ka")[0].appendChild(divForBtn)
 
             tdbtnForMove = document.createElement("td")
-            tdbtnForMove.className = films["Просмотренные фильмы"][i][0]
+            tdbtnForMove.className = films["Просмотренные фильмы"][i][0].replace(/\s/g, "")
             tdbtnForMove.classList.add("btnTd")
-            document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0])[0].appendChild(tdbtnForMove)
+            document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(tdbtnForMove)
 
             btnForMove = document.createElement("button")
             btnForMove.textContent = "Удалить фильм из базы"
             btnForMove.className = 'btnInTable'
 
-            document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0])[0].appendChild(btnForMove)
+            document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(btnForMove)
         }
 
 
