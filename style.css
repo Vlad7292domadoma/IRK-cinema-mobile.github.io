@@ -5,6 +5,8 @@
     margin-bottom: 100vh;
     margin-left: 0;
     margin-right: 0;
+    font-family: Verdana,
+            sans-serif;
 }
 
 .ownDiv {
@@ -221,7 +223,9 @@
     margin-left: 25px;
 }
 
-
+.divUnSeeFilmsText {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 .zagolovokUnSeeFilmsClass {
     font-size: 36px;
@@ -408,6 +412,7 @@
     text-align: center;
     padding-top: 20px;
     font-weight: 600;
+    
 }
 
 .karto4ka {
