@@ -265,102 +265,6 @@ filmComm.textContent = films["Просмотренные фильмы"][i][3]
 
 
 
-
- /*    let zagolovokUnSeeFilms = document.createElement('h3')
-    zagolovokUnSeeFilms.className = "zagolovokUnSeeFilmsClass"
-    zagolovokUnSeeFilms.textContent = "Непросмотренные фильмы"  
-    
-    document.querySelector("#divUnSeeFilmsText").appendChild(zagolovokUnSeeFilms)
-
-  
-    let row1 = document.createElement("tr");
-    row1.className = "headtr"
-    row1.innerHTML = `
-            <td class="td1">Название</td>
-            <td class="td2">Жанр</td> 
-            <td class="td3">Тип</td>
-            <td class="td4">Комментарий</td>
-            <td class="td5"></td>
-         `;
-    document.querySelector("#divUnSeeFilmsTable").appendChild(row1);
-
-    for (let i = 0; i < films["Непросмотренные фильмы"].length; i++) {
-        let row = document.createElement("tr");
-        
-        row.className = "unSeeTr"
-
-        if (i % 2 === 0) {
-            row.classList.add("greyTr");
-        }
-        else {
-            row.classList.add("whiteTr");
-        }
-        row.innerHTML = `
-            <td class="td1 ">${films["Непросмотренные фильмы"][i][0]}</td>
-            <td class="td2 ${films["Непросмотренные фильмы"][i][0]}">${films["Непросмотренные фильмы"][i][1]}</td> 
-            <td class="td3 ${films["Непросмотренные фильмы"][i][0]}">${films["Непросмотренные фильмы"][i][2]}</td>
-            <td class="correctable td4 ${films["Непросмотренные фильмы"][i][0]}" id="${films["Непросмотренные фильмы"][i][0]}">${films["Непросмотренные фильмы"][i][3]}</td>
-            <td  class="btnTd td5 ${films["Непросмотренные фильмы"][i][0]}"><button class="tableBtn">↓</button></td>
-         `;
-        document.querySelector("#divUnSeeFilmsTable").appendChild(row);
-    }
-    let zagolovokSeeFilms = document.createElement('h3')
-    zagolovokSeeFilms.className = "zagolovokSeeFilms"
-    zagolovokSeeFilms.textContent = "Просмотренные фильмы"
-    document.querySelector("#seeDiv").appendChild(zagolovokSeeFilms)
-    
-    let row = document.createElement("tr");
-    row.className = "headtr "
-    row.innerHTML = `
-            <td class="td1">Название</td>
-            <td class="td2">Жанр</td> 
-            <td class="td3">Тип</td>
-            <td class="td4">Комментарий</td>
-            <td class="td5"></td>
-         `;
-   
-    document.querySelector("#seeDiv").appendChild(row);
-    for (let i = 0; i < films["Просмотренные фильмы"].length; i++) {
-        let row = document.createElement("tr");
-        row.className = "seeDiv"
-
-        if (i % 2 === 0) {
-            row.classList.add("greyTr");
-        }
-        else {
-            row.classList.add("whiteTr");
-        }
-        row.innerHTML = `
-            <td class="td1">${films["Просмотренные фильмы"][i][0]}</td>
-            <td class="td2">${films["Просмотренные фильмы"][i][1]}</td> 
-            <td class="td3">${films["Просмотренные фильмы"][i][2]}</td>
-            <td class="correctable td4" id="${films["Просмотренные фильмы"][i][0]}">${films["Просмотренные фильмы"][i][3]}</td>
-            <td class="btnTd td5"><button class="tableBtn">Х</button></td>
-         `;
-        document.querySelector("#seeDiv").appendChild(row);
-    }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-*/
-
-
-
 }
  
 
@@ -517,8 +421,25 @@ commChangeFn();
 
 let allFilmArray = [].concat(films["Непросмотренные фильмы"], films["Просмотренные фильмы"])
 let allFilmArray2 = [].concat(...allFilmArray)
+let allFilmArray3 = []
+
+
+
+
+for (let i = 0; i < allFilmArray2.length; i += 4) {
+    allFilmArray3.push(allFilmArray2[i]);
+}
+
+
+for (var i = 0; i < allFilmArray3.length; i++) {
+    allFilmArray3[i] = allFilmArray3[i].replace(/\s/g, '');
+}
+
+
+
+
 document.querySelector('#addBtn').onclick = function () {
-    if (allFilmArray2.includes(document.querySelector("#inputnm").value) && document.querySelector("#inputnm").value) {
+    if (allFilmArray3.includes(document.querySelector("#inputnm").value.replace(/\s/g, "")) && document.querySelector("#inputnm").value) {
         alert("Такой фильм уже есть в базе")
         document.querySelector("#inputnm").value = "";
         document.querySelector("#inputgnr").value = "";
