@@ -121,7 +121,8 @@ function makeTable() {
 
             btnForMove = document.createElement("button")
             btnForMove.className = 'btnInTable'
-            btnForMove.textContent = "↓";
+            btnForMove.textContent = "✔";
+
             document.getElementsByClassName("divForBtn" + films["Непросмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(btnForMove)
         }       
 
@@ -239,9 +240,8 @@ filmComm.textContent = films["Просмотренные фильмы"][i][3]
             document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(tdbtnForMove)
 
             btnForMove = document.createElement("button")
-            btnForMove.textContent = "x"
+            btnForMove.textContent = "✖"
             btnForMove.className = 'btnInTable'
-
             document.getElementsByClassName("divForBtn" + films["Просмотренные фильмы"][i][0].replace(/\s/g, ""))[0].appendChild(btnForMove)
         }
 
