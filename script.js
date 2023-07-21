@@ -132,6 +132,8 @@ function makeTable() {
         const divSeeFilmsText = document.createElement("div");
         divSeeFilmsText.className = "divSeeFilmsText"
         divSeeFilmsText.textContent = "Просмотренные фильмы:"
+        divSeeFilmsText.id = "divSeeFilmsText"
+
 
         const divSeeFilmsKarto4ki = document.createElement("div");
         divSeeFilmsKarto4ki.className = "divSeeFilmsKarto4ki"
