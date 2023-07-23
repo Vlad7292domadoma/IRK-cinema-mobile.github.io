@@ -644,7 +644,20 @@ window.addEventListener('scroll', function () {
     var div = document.getElementById('divPerehodKProsmotrennym');
     if (window.scrollY > 100) {
         div.style.display = 'none';
+        
     } else {
         div.style.display = 'block';
     }
+
 });
+
+
+
+
+
+
+
+if (films["Непросмотренные фильмы"].length > 32) {
+    
+    document.getElementById('divSeeFilmsText').style.color = 'white'
+}
